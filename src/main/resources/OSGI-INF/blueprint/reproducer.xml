@@ -1,0 +1,14 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+          xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0">
+
+    <service interface="org.overlord.xmlsecdemo.IReproducer" ref="reproducer">
+        <service-properties>
+            <entry key="osgi.jndi.service.name" value="jdbc/sramp"/>
+            <entry key="datasource" value="sramp"/>
+        </service-properties>
+    </service>
+
+    <bean class="org.overlord.xmlsecdemo.ReproducerBean" id="reproducer">
+    </bean>
+
+</blueprint>
